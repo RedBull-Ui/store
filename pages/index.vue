@@ -32,6 +32,7 @@
   display: flex;
   padding: 5px;
   flex-direction: column;
+  
 }
 .top p{
   text-align: right;
