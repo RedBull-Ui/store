@@ -6,6 +6,22 @@
       <h3>Get your gear today</h3> <br> <br> <br>
       <button><span>Shop Hiking GEAR</span> <span>--></span></button>
     </div>
+    <!-- slider jour  -->
+    <topJour />
+    <!-- slider jour  -->
+
+    <div class="center">
+      <h1>Meilleure <br> des ventes</h1> <br> <br> <br> <br>
+        <button><span>Visiter maintenant</span> <span>--></span></button>
+    </div>
+
+    <!-- categories -->
+    <categoriesIndex />
+    <!-- categories -->
+
+    <!-- les sold  -->
+    <soldeIndex />
+    <!-- les sold  -->
   </div>
   
 </template>
@@ -22,6 +38,7 @@
 }
 .body{
   width: 100%;
+  background-color: rgba(227, 228, 230, 0.363);
 }
 
 .top{
@@ -32,7 +49,7 @@
   display: flex;
   padding: 5px;
   flex-direction: column;
-  
+
 }
 .top p{
   text-align: right;
@@ -57,13 +74,57 @@
   align-items: center;
   padding: 15px;
 }
+
+/* center  */
+.center {
+  padding: 20px;
+  height: 580px;
+  background: url(/tecnologie.jpg) center/cover;
+}
+.center h1{
+  color: white;
+  font-size: 3rem;
+}
+.center button{
+  margin-top: 150px;
+  width: 300px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+/* center  */
+
+/* categories  */
+.categories{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* categories  */
+
 </style>
 
 <script>
 import appNav from '/components/appNav.vue'
+import topJour from '/components/topJour.vue'
+import categoriesIndex from '/components/categoriesIndex.vue'
+import soldeIndex from '/components/soldeIndex.vue'
 export default {
   components: {
-    appNav
+    appNav,
+    topJour,
+    categoriesIndex,
+    soldeIndex
   },
   name: 'IndexPage'
 }
