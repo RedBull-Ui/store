@@ -9,48 +9,60 @@
                 </span>
             </div>
             <div class="tonalMenu" @click="menuClose()">
-                <span class="material-symbols-outlined" >
+                <span class="material-symbols-outlined">
                     close
                 </span>
             </div>
         </div>
+        <div class="menuItem">
+            <p>Collections</p>
+            <span class="material-symbols-outlined">
+                chevron_right
+            </span>
+        </div>
+        <div class="menuItem">
+            <p>Home</p>
+            <span class="material-symbols-outlined">
+                chevron_right
+            </span>
+        </div>
+        <div class="menuItem">
+            <p>Contact</p>
+            <span class="material-symbols-outlined">
+                chevron_right
+            </span>
+        </div>
+        <div class="menuItem">
+            <p>About</p>
+            <span class="material-symbols-outlined">
+                chevron_right
+            </span>
+        </div>
+        <div class="menuItem">
+            <p>Help</p>
+            <span class="material-symbols-outlined">
+                chevron_right
+            </span>
+        </div>
+
+        <h4 style="position: absolute; bottom: 10;">Powered by Privat's Labs</h4>
+
     </div>
 </template>
 
-<script>
-export default {
-      methods: {
-        menuClose() {
-            var menu = document.getElementById('menu');
-
-            menu.style.width = '0%'
-
-            var elementsTonal = document.querySelectorAll('.tonal');
-
-            // Sélectionnez tous les éléments avec la classe "tonal" et le h1
-            var elementsTonalAndH1 = document.querySelectorAll('.tonalMenu, #h1Menu');
-
-            // Parcourez chaque élément
-            elementsTonalAndH1.forEach(function (element) {
-                // Modifiez la propriété CSS 'display' à 'block'
-                element.style.display = 'none';
-            });
-
-        }
-    },
-}
-</script>
 
 <style scoped>
 .menu {
-    position: absolute;
+    position: fixed;
     z-index: 100;
     right: 0;
     top: 0;
     width: 0%;
-    height: 100vh;
+    max-height: 100%;
+    min-height: 100%;
     background-color: #232323;
     transition: 0.2s ease-in-out;
+    overflow: hidden;
 }
 
 .menu-nav {
@@ -81,4 +93,47 @@ export default {
 
     display: none;
 }
+
+/* les menu itels ici  */
+
+.menuItem {
+    padding: 0 20px 0px 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+span{
+    color: orangered;
+}
+
+/* les menu itels ici  */
 </style>
+
+
+<script>
+export default {
+    methods: {
+        menuClose() {
+            var menu = document.getElementById('menu');
+
+            menu.style.width = '0%'
+            document.body.style.overflow = 'scroll';
+
+
+            var elementsTonal = document.querySelectorAll('.tonal');
+
+            // Sélectionnez tous les éléments avec la classe "tonal" et le h1
+            var elementsTonalAndH1 = document.querySelectorAll('.tonalMenu, #h1Menu');
+
+            // Parcourez chaque élément
+            elementsTonalAndH1.forEach(function (element) {
+                // Modifiez la propriété CSS 'display' à 'block'
+                element.style.display = 'none';
+            });
+
+        }
+    },
+}
+</script>

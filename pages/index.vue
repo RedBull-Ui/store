@@ -51,6 +51,9 @@ export default {
 
       menu.style.width = '100%'
 
+     document.body.style.overflow ='hidden';
+
+
       var elementsTonal = document.querySelectorAll('.tonalMenu');
 
      // Sélectionnez tous les éléments avec la classe "tonal" et le h1
