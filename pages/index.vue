@@ -81,6 +81,7 @@ export default {
 
 }
 
+
 .body {
   width: 100% ;
   margin: 0px ;

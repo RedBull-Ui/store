@@ -15,37 +15,37 @@
             </div>
         </div>
         <div class="menuItem">
-            <p>Collections</p>
+            <p>Telephone</p>
             <span class="material-symbols-outlined">
                 chevron_right
             </span>
         </div>
         <div class="menuItem">
-            <p>Home</p>
+            <p>Ordinateur</p>
             <span class="material-symbols-outlined">
                 chevron_right
             </span>
         </div>
         <div class="menuItem">
-            <p>Contact</p>
+            <p>Frigo</p>
             <span class="material-symbols-outlined">
                 chevron_right
             </span>
         </div>
         <div class="menuItem">
-            <p>About</p>
+            <p>Tablette</p>
             <span class="material-symbols-outlined">
                 chevron_right
             </span>
         </div>
         <div class="menuItem">
-            <p>Help</p>
+            <p>Accessoires</p>
             <span class="material-symbols-outlined">
                 chevron_right
             </span>
         </div>
 
-        <h4 style="position: absolute; bottom: 10;">Powered by Privat's Labs</h4>
+        <h4>Powered by Privat's Labs</h4>
 
     </div>
 </template>
@@ -53,6 +53,8 @@
 
 <style scoped>
 .menu {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     z-index: 100;
     right: 0;
@@ -109,6 +111,13 @@ span{
 }
 
 /* les menu itels ici  */
+
+h4{
+    position: fixed;
+    bottom: 0;
+    margin-left: 24.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
 </style>
 
 
