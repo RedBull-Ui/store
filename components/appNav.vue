@@ -19,6 +19,10 @@
     </div>
 </template>
 
+<script>
+
+</script>
+
 <style scoped>
 .nav {
     display: flex;
@@ -43,4 +47,5 @@ h1{
     justify-content: center;
 }
 </style>
+
 

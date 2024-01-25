@@ -1,18 +1,23 @@
 <template>
   <div class="body">
     <div class="top">
-      <appNav />
+      <appMenu />
+      <appNav  />
+      <br> <br> <br>
       <p>Never <br> stop <br> exploring</p> <br>
       <h3>Get your gear today</h3> <br> <br> <br>
-      <button><span>Shop Hiking GEAR</span> <span>--></span></button>
+      <button>
+        <span>Shop Hiking GEAR</span> <span>--></span>
+      </button>
     </div>
+    <br> <br>
     <!-- slider jour  -->
     <topJour />
     <!-- slider jour  -->
 
     <div class="center">
       <h1>Meilleure <br> des ventes</h1> <br> <br> <br> <br>
-        <button><span>Visiter maintenant</span> <span>--></span></button>
+      <button><span>Visiter maintenant</span> <span>--></span></button>
     </div>
 
     <!-- categories -->
@@ -23,24 +28,50 @@
     <soldeIndex />
     <!-- les sold  -->
   </div>
-  
 </template>
+
+<script>
+import appMenu from '~/components/appMenu.vue'
+import appNav from '~/components/appNav.vue'
+import topJour from '~/components/topJour.vue'
+import categoriesIndex from '~/components/categoriesIndex.vue'
+import soldeIndex from '~/components/soldeIndex.vue'
+
+export default {
+  components: {
+    appNav,
+    topJour,
+    categoriesIndex,
+    soldeIndex,
+    appMenu
+  },
+  methods: {
+    
+  },
+}
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
 
 *,::after, ::before{
-  margin: 0;
-  padding: 0;
+  margin: 0 ;
+  padding: 0 ;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 
 }
-.body{
-  width: 100%;
+
+.body {
+  width: 100% ;
+  margin: 0px ;
   background-color: rgba(227, 228, 230, 0.363);
 }
 
+/* menu  */
+
+
+/* menu  */
 .top{
   height: 75vh;
   background: url(/accueil.jpg) center/cover;
@@ -114,18 +145,3 @@
 
 </style>
 
-<script>
-import appNav from '/components/appNav.vue'
-import topJour from '/components/topJour.vue'
-import categoriesIndex from '/components/categoriesIndex.vue'
-import soldeIndex from '/components/soldeIndex.vue'
-export default {
-  components: {
-    appNav,
-    topJour,
-    categoriesIndex,
-    soldeIndex
-  },
-  name: 'IndexPage'
-}
-</script>
