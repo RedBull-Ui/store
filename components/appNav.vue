@@ -11,7 +11,7 @@
                 shopping_basket
             </span>
         </div>
-        <div class="tonal">
+        <div class="tonal" @click="$emit('menu')">
             <span class="material-symbols-outlined">
                 menu
             </span>
@@ -21,7 +21,11 @@
 
 <script>
 
+export default{
+    name: 'appNav',
+}
 </script>
+
 
 <style scoped>
 .nav {

@@ -1,14 +1,14 @@
 <template>
     <div class="menu" id="menu">
         <div class="menu-nav">
-            <h1>LOGO</h1>
+            <h1 id="h1Menu">LOGO</h1>
 
-            <div class="tonal">
+            <div class="tonalMenu">
                 <span class="material-symbols-outlined">
                     shopping_basket
                 </span>
             </div>
-            <div class="tonal">
+            <div class="tonalMenu" @click="menuClose()">
                 <span class="material-symbols-outlined" >
                     close
                 </span>
@@ -18,7 +18,27 @@
 </template>
 
 <script>
+export default {
+      methods: {
+        menuClose() {
+            var menu = document.getElementById('menu');
 
+            menu.style.width = '0%'
+
+            var elementsTonal = document.querySelectorAll('.tonal');
+
+            // Sélectionnez tous les éléments avec la classe "tonal" et le h1
+            var elementsTonalAndH1 = document.querySelectorAll('.tonalMenu, #h1Menu');
+
+            // Parcourez chaque élément
+            elementsTonalAndH1.forEach(function (element) {
+                // Modifiez la propriété CSS 'display' à 'block'
+                element.style.display = 'none';
+            });
+
+        }
+    },
+}
 </script>
 
 <style scoped>
@@ -30,6 +50,7 @@
     width: 0%;
     height: 100vh;
     background-color: #232323;
+    transition: 0.2s ease-in-out;
 }
 
 .menu-nav {
@@ -39,7 +60,7 @@
     color: white;
 }
 
-h1 {
+#h1Menu {
     margin-right: 40px;
     display: none;
 }
@@ -48,13 +69,12 @@ h1 {
     font-size: 1.8rem;
 }
 
-.tonal {
+.tonalMenu {
     background-color: white;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     color: orangered;
-    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;

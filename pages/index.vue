@@ -2,7 +2,7 @@
   <div class="body">
     <div class="top">
       <appMenu />
-      <appNav  />
+      <appNav v-on:menu="menuTogle" />
       <br> <br> <br>
       <p>Never <br> stop <br> exploring</p> <br>
       <h3>Get your gear today</h3> <br> <br> <br>
@@ -46,7 +46,23 @@ export default {
     appMenu
   },
   methods: {
-    
+    menuTogle() {
+      var menu = document.getElementById('menu');
+
+      menu.style.width = '100%'
+
+      var elementsTonal = document.querySelectorAll('.tonalMenu');
+
+     // Sélectionnez tous les éléments avec la classe "tonal" et le h1
+      var elementsTonalAndH1 = document.querySelectorAll('.tonalMenu, h1');
+
+      // Parcourez chaque élément
+      elementsTonalAndH1.forEach(function (element) {
+        // Modifiez la propriété CSS 'display' à 'block'
+        element.style.display = 'flex';
+      });
+
+    }
   },
 }
 </script>
