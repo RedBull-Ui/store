@@ -8,13 +8,13 @@
                     shopping_basket
                 </span>
             </div>
-            <div class="tonalMenu" @click="menuClose()">
-                <span class="material-symbols-outlined">
+            <div class="tonalMenu" >
+                <span class="material-symbols-outlined" @click="menuClose()">
                     close
                 </span>
             </div>
         </div>
-        <div class="menuItem">
+        <div class="menuItem" @click="$emit('telephone')">
             <p>Telephone</p>
             <span class="material-symbols-outlined">
                 chevron_right

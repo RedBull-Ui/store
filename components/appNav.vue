@@ -7,12 +7,12 @@
             </span>
         </div>
         <div class="tonal">
-            <span class="material-symbols-outlined">
+            <span class="material-symbols-outlined" @click="$emit('panier')">
                 shopping_basket
             </span>
         </div>
-        <div class="tonal" @click="$emit('menu')">
-            <span class="material-symbols-outlined">
+        <div class="tonal" >
+            <span class="material-symbols-outlined" @click="$emit('menu')">
                 menu
             </span>
         </div>

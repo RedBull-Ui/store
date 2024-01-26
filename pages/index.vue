@@ -2,7 +2,8 @@
   <div class="body">
     <div class="top">
       <appMenu />
-      <appNav v-on:menu="menuTogle" />
+      <panier v-on:closePanier="closePanier" />
+      <appNav v-on:menu="menuTogle" v-on:panier="panierTogle" />
       <br> <br> <br>
       <p>Never <br> stop <br> exploring</p> <br>
       <h3>Get your gear today</h3> <br> <br> <br>
@@ -32,6 +33,7 @@
 
 <script>
 import appMenu from '~/components/appMenu.vue'
+import panier from '~/components/panier.vue'
 import appNav from '~/components/appNav.vue'
 import topJour from '~/components/topJour.vue'
 import categoriesIndex from '~/components/categoriesIndex.vue'
@@ -43,7 +45,8 @@ export default {
     topJour,
     categoriesIndex,
     soldeIndex,
-    appMenu
+    appMenu,
+    panier
   },
   methods: {
     menuTogle() {
@@ -65,6 +68,26 @@ export default {
         element.style.display = 'flex';
       });
 
+    },
+    panierTogle() {
+      var panier = document.getElementById('panier');
+      var panierTop = document.getElementById('panierTop');
+      var panierCenter = document.getElementById('panierCenter');
+
+      panier.style.width = '90%'
+      panier.style.padding= '5px 20px 5px 20px'
+      panierTop.style.display= 'flex'
+      panierCenter.style.display= 'flex'
+    },
+    closePanier() {
+      var panier = document.getElementById('panier');
+      var panierTop = document.getElementById('panierTop');
+      var panierCenter = document.getElementById('panierCenter');
+
+      panier.style.width = '0%'
+      panier.style.padding = '0px'
+      panierTop.style.display = 'none'
+      panierCenter.style.display = 'none'
     }
   },
 }
@@ -78,28 +101,28 @@ export default {
   padding: 0 ;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
-
 }
-
 
 .body {
   width: 100% ;
   margin: 0px ;
   background-color: rgba(227, 228, 230, 0.363);
+  overflow-x: hidden;
 }
 
-/* menu  */
+/* panier  */
 
 
-/* menu  */
+/* panier  */
 .top{
   height: 75vh;
   background: url(/accueil.jpg) center/cover;
   color: white;
   width: 100%;
   display: flex;
-  padding: 5px;
+  padding: 10px;
   flex-direction: column;
+  margin: 0%;
 
 }
 .top p{
