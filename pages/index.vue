@@ -77,7 +77,10 @@ export default {
       panier.style.width = '90%'
       panier.style.padding= '5px 20px 5px 20px'
       panierTop.style.display= 'flex'
-      panierCenter.style.display= 'flex'
+      panierCenter.style.display = 'flex'
+
+      document.body.style.overflow = 'hidden';
+
     },
     closePanier() {
       var panier = document.getElementById('panier');
@@ -88,6 +91,9 @@ export default {
       panier.style.padding = '0px'
       panierTop.style.display = 'none'
       panierCenter.style.display = 'none'
+
+      document.body.style.overflow = 'scroll';
+
     }
   },
 }

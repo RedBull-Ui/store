@@ -3,11 +3,11 @@
         <div class="menu-nav">
             <h1 id="h1Menu">LOGO</h1>
 
-            <div class="tonalMenu">
+            <!-- <div class="tonalMenu">
                 <span class="material-symbols-outlined">
                     shopping_basket
                 </span>
-            </div>
+            </div> -->
             <div class="tonalMenu" >
                 <span class="material-symbols-outlined" @click="menuClose()">
                     close
@@ -69,9 +69,10 @@
 
 .menu-nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     color: white;
+    padding: 0px 20px 0px 20px;
 }
 
 #h1Menu {
